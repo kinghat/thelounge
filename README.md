@@ -87,3 +87,5 @@ Before submitting any change, make sure to:
   - Run `yarn format:prettier` if linting fails
 - Run `yarn build` if you change or add anything in `client/js` or `client/components`
 - `yarn dev` can be used to start The Lounge with hot module reloading
+
+If you would like to work on The Lounge in a containerized development environment, VS Code specific configuration files have been provided. If not prompted, use the `Rebuild and Reopen in Container` command to get going. More info in [Contributing](.github/CONTRIBUTING.md).
