@@ -5,13 +5,17 @@
   // },
   // "image":"mcr.microsoft.com/devcontainers/base:alpine",
   "image": "mcr.microsoft.com/devcontainers/typescript-node",
-  "mounts": [
-    "type=volume,source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules"
-  ],
+  // "mounts": [
+  //   "type=volume,source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules"
+  // ],
+    "portsAttributes": {
+    "9000": {
+      "label": "The Lounge Dev"
+    }
+  },
   "customizations": {
-    // Configure properties specific to VS Code.
+  //   // Configure properties specific to VS Code.
     "vscode": {
-      "settings": {},
       "extensions": [
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
@@ -21,13 +25,8 @@
       ]
     }
   },
-  // "postCreateCommand": "yarn install && NODE_ENV=production yarn build && yarn dev",
-  // "initializeCommand": "sudo chown node node_modules",
-  // "postCreateCommand": "yarn install && NODE_ENV=production yarn build && yarn dev",
-  // "postCreateCommand": "yarn install --production=false && NODE_ENV=production yarn build && yarn dev",
-  // "postCreateCommand": "sudo chown node node_modules && yarn install && NODE_ENV=production yarn build && yarn dev"
   // "remoteUser": "vscode"
-  "postStartCommand": "sudo chown node node_modules && yarn install"
+  "postStartCommand": "sudo chown node node_modules && yarn install && NODE_ENV=production yarn build"
 }
 
 // {
