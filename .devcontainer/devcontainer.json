@@ -28,7 +28,6 @@
   "onCreateCommand": "sudo ln -s $(pwd)/index.js /usr/local/bin/thelounge",
   // "postStartCommand": "sudo chown node node_modules && yarn install && NODE_ENV=production yarn build"
   "postStartCommand": "yarn install && sudo chown node node_modules && NODE_ENV=production yarn build && yarn dev"
-  // "postStartCommand": "yarn install && sudo chown node node_modules && NODE_ENV=production yarn build && sudo ln -s $(pwd)/index.js /usr/local/bin/thelounge"
 }
 
 // {
