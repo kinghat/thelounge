@@ -8,13 +8,12 @@
   // "mounts": [
   //   "type=volume,source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules"
   // ],
-    "portsAttributes": {
+  "portsAttributes": {
     "9000": {
       "label": "The Lounge Dev"
     }
   },
   "customizations": {
-  //   // Configure properties specific to VS Code.
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
@@ -26,7 +25,8 @@
     }
   },
   // "remoteUser": "vscode"
-  "postStartCommand": "sudo chown node node_modules && yarn install && NODE_ENV=production yarn build"
+  // "postStartCommand": "sudo chown node node_modules && yarn install && NODE_ENV=production yarn build"
+  "postStartCommand": "yarn install && sudo chown node node_modules && NODE_ENV=production yarn build && mkdir /home/node/bin && ln -s $(pwd)/index.js ~/bin/thelounge"
 }
 
 // {
