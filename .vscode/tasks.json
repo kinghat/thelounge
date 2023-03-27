@@ -13,6 +13,17 @@
         "panel": "shared",
         "group": "test"
       }
+    },
+    {
+      "label": "yarn build",
+      "type": "shell",
+      "command": "yarn",
+      "args": ["build"],
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "shared",
+        "group": "test"
+      }
     }
   ]
 }
