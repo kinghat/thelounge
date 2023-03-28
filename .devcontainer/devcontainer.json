@@ -56,5 +56,4 @@
 //   },
 //   "forwardPorts": [9000],
 //   "postStartCommand": "yarn install && NODE_ENV=production yarn build && yarn dev",
-//   "remoteUser": "node"
 // }
